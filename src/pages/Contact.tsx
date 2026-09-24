@@ -10,7 +10,7 @@ const contactCards = [
   {
     icon: MapPin,
     title: "Adresse",
-    text: "Service Financier et du Budget · MIDSP\nAntananarivo, Madagascar",
+    text: "Immeuble MIDSP Anosy\nRue Rasalimo, Anosy, Antananarivo 101, Madagascar",
   },
   {
     icon: Phone,
@@ -20,7 +20,7 @@ const contactCards = [
   {
     icon: Mail,
     title: "Email",
-    text: "contact@exemple.mg",
+    text: "rojonyaikou072@gmail.com\ntafitarasoanaivo21@gmail.com",
   },
   {
     icon: Clock3,
