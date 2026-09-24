@@ -12,7 +12,7 @@ import {
   TriangleAlert,
 } from "lucide-react";
 import { useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import Button from "../components/common/Button";
 import SectionTitle from "../components/common/SectionTitle";
@@ -247,6 +247,7 @@ export default function Dashboard() {
   const [type, setType] = useState<string>("all");
   const [step, setStep] = useState<string>("all");
   const [sortKey, setSortKey] = useState<SortKey>("date-desc");
+  const navigate = useNavigate();
 
   const filteredDossiers = useFilteredDossiers(query, status, type, step, sortKey);
 
@@ -415,7 +416,19 @@ export default function Dashboard() {
                     </thead>
                     <tbody className="divide-y divide-line">
                       {filteredDossiers.map((dossier) => (
-                        <tr className="transition hover:bg-slate-50" key={dossier.reference}>
+                        <tr
+                          className="cursor-pointer transition hover:bg-slate-50 focus-within:bg-slate-50"
+                          key={dossier.reference}
+                          onClick={() => navigate(`/dossiers/${dossier.reference}`)}
+                          onKeyDown={(event) => {
+                            if (event.key === "Enter" || event.key === " ") {
+                              event.preventDefault();
+                              navigate(`/dossiers/${dossier.reference}`);
+                            }
+                          }}
+                          role="link"
+                          tabIndex={0}
+                        >
                           <td className="px-4 py-4 font-semibold text-ink">{dossier.reference}</td>
                           <td className="px-4 py-4 text-sm text-muted">{dossier.type}</td>
                           <td className="px-4 py-4 text-sm text-muted">{formatDate(dossier.createdAt)}</td>
