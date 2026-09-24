@@ -1,3 +1,4 @@
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -13,6 +14,12 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const reduceMotion = useReducedMotion();
+
+  const linkClasses = (isActive: boolean) =>
+    `relative rounded-lg px-3.5 py-2.5 text-sm font-semibold transition-colors ${
+      isActive ? "text-brand-800" : "text-muted hover:bg-slate-100 hover:text-ink"
+    }`;
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white/95 backdrop-blur-lg">
@@ -36,18 +43,24 @@ export default function Navbar() {
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Navigation principale">
           {links.map((link) => (
             <NavLink
-              className={({ isActive }) =>
-                `rounded-lg px-3.5 py-2.5 text-sm font-semibold transition-colors ${
-                  isActive
-                    ? "bg-brand-50 text-brand-800"
-                    : "text-muted hover:bg-slate-100 hover:text-ink"
-                }`
-              }
+              className={({ isActive }) => linkClasses(isActive)}
               end={link.end}
               to={link.href}
               key={link.href}
             >
-              {link.label}
+              {({ isActive }) => (
+                <span className="relative z-10">
+                  {isActive && (
+                    <motion.span
+                      animate={reduceMotion ? { opacity: 1 } : { opacity: 1, scale: 1 }}
+                      className="absolute inset-0 -z-10 rounded-lg bg-brand-50"
+                      layoutId="nav-active-pill"
+                      transition={{ duration: reduceMotion ? 0 : 0.18, ease: "easeOut" }}
+                    />
+                  )}
+                  {link.label}
+                </span>
+              )}
             </NavLink>
           ))}
         </nav>
@@ -64,28 +77,45 @@ export default function Navbar() {
       </div>
 
       {open && (
-        <nav
-          aria-label="Navigation mobile"
-          className="border-t border-line bg-white px-5 py-4 shadow-lg lg:hidden"
-        >
-          <div className="mx-auto max-w-7xl">
-            {links.map((link) => (
-              <NavLink
-                className={({ isActive }) =>
-                  `block rounded-lg px-4 py-3 text-sm font-semibold ${
-                    isActive ? "bg-brand-50 text-brand-800" : "text-muted hover:bg-slate-50"
-                  }`
-                }
-                end={link.end}
-                onClick={() => setOpen(false)}
-                to={link.href}
-                key={link.href}
-              >
-                {link.label}
-              </NavLink>
-            ))}
-          </div>
-        </nav>
+        <AnimatePresence>
+          <motion.nav
+            animate={{ opacity: 1, y: 0 }}
+            aria-label="Navigation mobile"
+            className="border-t border-line bg-white px-5 py-4 shadow-lg lg:hidden"
+            exit={{ opacity: 0, y: -8 }}
+            initial={{ opacity: 0, y: -8 }}
+            transition={{ duration: reduceMotion ? 0 : 0.16, ease: "easeOut" }}
+          >
+            <div className="mx-auto max-w-7xl">
+              {links.map((link) => (
+                <NavLink
+                  className={({ isActive }) =>
+                    `relative block rounded-lg px-4 py-3 text-sm font-semibold ${
+                      isActive ? "text-brand-800" : "text-muted hover:bg-slate-50"
+                    }`
+                  }
+                  end={link.end}
+                  onClick={() => setOpen(false)}
+                  to={link.href}
+                  key={link.href}
+                >
+                  {({ isActive }) => (
+                    <span className="relative z-10">
+                      {isActive && (
+                        <motion.span
+                          className="absolute inset-0 -z-10 rounded-lg bg-brand-50"
+                          layoutId="nav-active-pill-mobile"
+                          transition={{ duration: reduceMotion ? 0 : 0.18, ease: "easeOut" }}
+                        />
+                      )}
+                      {link.label}
+                    </span>
+                  )}
+                </NavLink>
+              ))}
+            </div>
+          </motion.nav>
+        </AnimatePresence>
       )}
     </header>
   );

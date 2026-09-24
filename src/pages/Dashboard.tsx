@@ -17,7 +17,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Button from "../components/common/Button";
 import SectionTitle from "../components/common/SectionTitle";
 import Footer from "../components/layout/Footer";
-import Navbar from "../components/layout/Navbar";
 import { dossiers, stepLabels, statusMeta, typeOptions, type DossierStatus } from "../data/dossiers";
 import { dashboardStats, expenseBreakdown, monthlyTrend, statusDistribution } from "../data/stats";
 
@@ -253,7 +252,6 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-canvas text-ink">
-      <Navbar />
       <main>
         <section className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">

@@ -4,7 +4,6 @@ import { Link, Navigate, useParams } from "react-router-dom";
 
 import Button from "../components/common/Button";
 import Footer from "../components/layout/Footer";
-import Navbar from "../components/layout/Navbar";
 import { circuitSteps } from "../data/circuit";
 import { getDossier, statusMeta, stepLabels } from "../data/dossiers";
 
@@ -36,7 +35,6 @@ export default function DossierDetail() {
 
   return (
     <div className="min-h-screen bg-canvas text-ink">
-      <Navbar />
       <main>
         <section className="border-b border-line bg-white">
           <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">

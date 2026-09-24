@@ -5,7 +5,6 @@ import { useMemo, useState } from "react";
 import Button from "../components/common/Button";
 import SectionTitle from "../components/common/SectionTitle";
 import Footer from "../components/layout/Footer";
-import Navbar from "../components/layout/Navbar";
 import { circuitHighlights, circuitSteps, type CircuitStepId } from "../data/circuit";
 
 export default function Circuit() {
@@ -18,7 +17,6 @@ export default function Circuit() {
 
   return (
     <div className="min-h-screen bg-canvas text-ink">
-      <Navbar />
       <main>
         <section className="border-b border-line bg-white">
           <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1fr_0.95fr] lg:items-end lg:py-24">

@@ -1,3 +1,4 @@
+import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
@@ -8,6 +9,8 @@ type ButtonProps = {
   variant?: "primary" | "secondary" | "light";
   arrow?: boolean;
 };
+
+const MotionLink = motion.create(Link);
 
 const styles = {
   primary:
@@ -24,13 +27,17 @@ export default function Button({
   variant = "primary",
   arrow = false,
 }: ButtonProps) {
+  const reduceMotion = useReducedMotion();
+
   return (
-    <Link
+    <MotionLink
       className={`inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border px-5 py-2.5 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 ${styles[variant]}`}
+      whileHover={reduceMotion ? undefined : { y: -1 }}
+      whileTap={reduceMotion ? undefined : { scale: 0.98 }}
       to={href}
     >
       {children}
       {arrow && <ArrowRight aria-hidden="true" size={17} />}
-    </Link>
+    </MotionLink>
   );
 }

@@ -14,7 +14,6 @@ import {
 import Button from "../components/common/Button";
 import SectionTitle from "../components/common/SectionTitle";
 import Footer from "../components/layout/Footer";
-import Navbar from "../components/layout/Navbar";
 import ispmLogo from "../imports/ispm.jpeg";
 import midspLogo from "../imports/midsp.jpeg";
 import midspBanner from "../imports/banniere.jpeg";
@@ -207,7 +206,6 @@ function HeroBanner() {
 export default function Home() {
   return (
     <div className="min-h-screen bg-canvas text-ink">
-      <Navbar />
       <main>
         <section className="relative overflow-hidden border-b border-line bg-white">
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-300 to-transparent" />
