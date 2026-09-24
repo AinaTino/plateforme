@@ -15,7 +15,7 @@ const contactCards = [
   {
     icon: Phone,
     title: "Téléphone",
-    text: "+261 XX XX XXX XX",
+    text: "+261 38 66 099 24\n+261 38 48 578 54",
   },
   {
     icon: Mail,
