@@ -31,7 +31,7 @@ export default function Circuit() {
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-7 text-muted sm:text-lg">
                 Le parcours ci-dessous présente le circuit de la dépense publique dans une logique
-                pédagogique et entièrement fictive, avec une lecture claire du rôle de chaque phase.
+                pédagogique, avec une lecture claire du rôle de chaque phase.
               </p>
             </div>
 
@@ -44,7 +44,7 @@ export default function Circuit() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm font-bold text-ink">Circuit actif</p>
-                    <p className="mt-1 text-xs text-muted">Vue de démonstration</p>
+                    <p className="mt-1 text-xs text-muted">Vue pédagogique</p>
                   </div>
                   <span className="grid h-11 w-11 place-items-center rounded-full bg-brand-50 text-brand-700">
                     <ArrowRight size={18} />

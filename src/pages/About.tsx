@@ -50,12 +50,12 @@ export default function About() {
         <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
           <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
             <div className="rounded-3xl border border-line bg-white p-6 shadow-[0_18px_40px_-32px_rgba(15,23,42,0.35)] sm:p-8">
-              <SectionTitle eyebrow="Présentation" title="Une plateforme de démonstration orientée lisibilité" description="Le prototype s’inscrit dans une logique institutionnelle sobre et crédible, sans backend ni logique métier réelle." />
+              <SectionTitle eyebrow="Présentation" title="Une plateforme orientée lisibilité" description="Le portail s’inscrit dans une logique institutionnelle sobre et crédible, pensée pour le suivi de l’exécution des dépenses publiques." />
               <div className="mt-6 flex flex-wrap gap-3 text-sm font-semibold text-muted">
                 {[
-                  "Site vitrine",
-                  "Prototype frontend",
-                  "Données fictives",
+                  "Portail institutionnel",
+                  "Suivi frontend",
+                  "Données de suivi",
                   "Navigation multi-page",
                 ].map((item) => (
                   <span className="rounded-full border border-line bg-canvas px-3 py-1.5" key={item}>

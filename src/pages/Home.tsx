@@ -191,12 +191,12 @@ function HeroBanner() {
         <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 px-5 py-4 text-white sm:px-6">
           <div>
             <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-blue-200">
-              Institution
+              Service Financier et du Budget
             </p>
-            <p className="mt-1 text-sm font-semibold sm:text-base">Service Financier et du Budget</p>
+            <p className="mt-1 text-sm font-semibold sm:text-base">Suivi de l’exécution des dépenses publiques</p>
           </div>
           <p className="text-right text-[11px] font-medium text-slate-200 sm:text-xs">
-            Bannière de démonstration
+            Informations de suivi
           </p>
         </div>
       </div>
@@ -216,14 +216,14 @@ export default function Home() {
               <HeroInstitutionStrip />
               <div className="inline-flex items-center gap-2 rounded-md border border-brand-200 bg-brand-50 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-brand-800">
                 <span className="h-2 w-2 rounded-full bg-brand-600" />
-                Plateforme de suivi
+                Portail institutionnel
               </div>
               <h1 className="mt-6 max-w-2xl text-4xl font-bold leading-[1.08] tracking-[-0.04em] text-ink sm:text-5xl lg:text-[3.5rem]">
                 Suivre la dépense publique,{" "}
                 <span className="text-brand-700">étape par étape.</span>
               </h1>
               <p className="mt-6 max-w-xl text-base leading-7 text-muted sm:text-lg">
-                Une plateforme de démonstration dédiée au suivi de l’exécution des
+                Une plateforme institutionnelle dédiée au suivi de l’exécution des
                 dépenses publiques, de l’engagement jusqu’au paiement.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -327,7 +327,7 @@ export default function Home() {
               </div>
               <span className="inline-flex w-fit items-center gap-2 rounded-md border border-white/10 bg-white/[0.06] px-3 py-1.5 text-xs font-semibold text-slate-300">
                 <span className="h-1.5 w-1.5 rounded-full bg-warning-600" />
-                Données de démonstration
+                Indicateurs de suivi
               </span>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4">

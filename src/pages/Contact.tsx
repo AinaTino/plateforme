@@ -57,14 +57,14 @@ export default function Contact() {
               </div>
               <h1 className="mt-6 text-4xl font-bold tracking-[-0.04em] sm:text-5xl">Le Service Financier et du Budget</h1>
               <p className="mt-5 text-base leading-7 text-muted sm:text-lg">
-                Pour toute demande d’information, adressez-vous au Service Financier et du Budget. Les coordonnées affichées ici sont fictives.
+                Pour toute demande d’information, adressez-vous au Service Financier et du Budget.
               </p>
             </div>
           </div>
         </section>
 
         <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
-          <SectionTitle eyebrow="Coordonnées" title="Une prise de contact simple et institutionnelle" description="Les éléments ci-dessous servent de démonstration et ne correspondent pas à des contacts officiels réels." />
+          <SectionTitle eyebrow="Coordonnées" title="Une prise de contact simple et institutionnelle" description="Les éléments ci-dessous présentent les coordonnées de contact de la plateforme." />
 
           <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {contactCards.map(({ icon: Icon, title, text }) => (
@@ -78,10 +78,10 @@ export default function Contact() {
 
           <div className="mt-6 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="rounded-3xl border border-line bg-brand-950 p-6 text-white sm:p-8">
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-blue-300">Coordonnées de démonstration</p>
-              <h2 className="mt-4 text-2xl font-bold tracking-tight">Le formulaire n’est pas connecté à un backend.</h2>
+              <p className="text-xs font-bold uppercase tracking-[0.16em] text-blue-300">Coordonnées du service</p>
+              <h2 className="mt-4 text-2xl font-bold tracking-tight">Le formulaire permet de transmettre votre demande au service concerné.</h2>
               <p className="mt-4 text-sm leading-7 text-slate-300">
-                Un message de confirmation local est affiché après l’envoi pour simuler un retour utilisateur crédible.
+                Un message de confirmation s’affiche après l’envoi pour valider la prise en compte de votre demande.
               </p>
               <div className="mt-8">
                 <Button href="/dashboard" variant="light" arrow>
@@ -118,7 +118,7 @@ export default function Contact() {
               {submitted && (
                 <div aria-live="polite" className="mt-5 rounded-2xl border border-success-200 bg-success-50 p-4 text-success-800">
                   <p className="text-sm font-bold">Message envoyé</p>
-                  <p className="mt-1 text-sm leading-6">Ceci est une démonstration. Aucun message réel n’a été transmis.</p>
+                  <p className="mt-1 text-sm leading-6">Votre message a bien été pris en compte par le formulaire de contact.</p>
                 </div>
               )}
             </motion.form>

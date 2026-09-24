@@ -29,7 +29,7 @@ export default function Footer() {
               </p>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-6 text-slate-300">
-              Une plateforme de démonstration pour rendre le circuit de la dépense
+              Une plateforme institutionnelle pour rendre le circuit de la dépense
               publique plus lisible, transparent et accessible.
             </p>
           </div>
@@ -85,8 +85,8 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col gap-2 pt-7 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 — Prototype de démonstration</p>
-          <p>Les données présentées sont entièrement fictives.</p>
+          <p>© 2026 — SPDP</p>
+          <p>Service Financier et du Budget · MIDSP</p>
         </div>
       </div>
     </footer>

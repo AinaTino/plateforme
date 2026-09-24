@@ -72,7 +72,7 @@ export const circuitHighlights = [
   },
   {
     icon: FileCheck2,
-    title: "Suivi de démonstration",
-    text: "Le prototype illustre un parcours réaliste sans logique métier réelle.",
+    title: "Suivi institutionnel",
+    text: "Le portail illustre un parcours clair du traitement des dépenses publiques.",
   },
 ];

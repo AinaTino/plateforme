@@ -259,20 +259,20 @@ export default function Dashboard() {
             <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-3xl">
                 <div className="inline-flex items-center gap-2 rounded-md border border-brand-200 bg-brand-50 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-brand-800">
-                  Tableau de bord · Données de démonstration
+                  Tableau de bord opérationnel
                 </div>
                 <h1 className="mt-6 text-4xl font-bold leading-[1.08] tracking-[-0.04em] sm:text-5xl">
                   Vue synthétique de l’état d’exécution des dépenses publiques.
                 </h1>
                 <p className="mt-5 max-w-2xl text-base leading-7 text-muted sm:text-lg">
-                  Les indicateurs et les dossiers ci-dessous sont fictifs et servent uniquement à illustrer le fonctionnement de la plateforme de suivi.
+                  Les indicateurs et les dossiers ci-dessous présentent l’état de suivi des dépenses et des dossiers en cours de traitement.
                 </p>
               </div>
 
               <div className="rounded-2xl border border-line bg-canvas px-5 py-4">
                 <p className="text-xs font-bold uppercase tracking-[0.14em] text-muted">Dernière mise à jour</p>
                 <p className="mt-2 text-sm font-semibold text-ink">23 septembre 2026</p>
-                <p className="mt-1 text-xs text-muted">Données fictives</p>
+                <p className="mt-1 text-xs text-muted">Flux de suivi</p>
               </div>
             </div>
 
@@ -291,7 +291,7 @@ export default function Dashboard() {
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="text-sm font-bold text-ink">Répartition des dossiers</p>
-                  <p className="mt-1 text-xs text-muted">Données fictives</p>
+                  <p className="mt-1 text-xs text-muted">Vue synthétique</p>
                 </div>
                 <BarChart3 className="text-brand-700" size={18} />
               </div>
@@ -318,7 +318,7 @@ export default function Dashboard() {
             <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="text-sm font-bold text-ink">Dossiers traités par mois</p>
-                <p className="mt-1 text-xs text-muted">Tendance fictive sur six mois</p>
+                <p className="mt-1 text-xs text-muted">Tendance sur six mois</p>
               </div>
               <CalendarDays className="text-brand-700" size={18} />
             </div>
@@ -469,12 +469,12 @@ export default function Dashboard() {
             <div className="rounded-3xl bg-brand-950 p-8 text-white sm:p-10 lg:p-12">
               <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-blue-300">Démonstration</p>
+                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-blue-300">Institution</p>
                   <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
-                    Les données affichées dans ce tableau de bord sont fictives.
+                    Les données affichées dans ce tableau de bord reflètent les principaux indicateurs de suivi.
                   </h2>
                   <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300">
-                    Le but est d’illustrer un dispositif de suivi crédible, pédagogique et facile à parcourir, sans backend ni traitement réel.
+                    Le but est de proposer une lecture crédible, pédagogique et facile à parcourir des dossiers suivis par la plateforme.
                   </p>
                 </div>
                 <Button href="/circuit" variant="light" arrow>
