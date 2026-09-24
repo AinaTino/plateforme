@@ -2,7 +2,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { midspLogo } from "../../assets/images";
+import midspLogo from "../../assets/midsp.jpeg";
 
 const links = [
   { label: "Accueil", href: "/", end: true },

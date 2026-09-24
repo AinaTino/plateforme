@@ -14,7 +14,8 @@ import {
 import Button from "../components/common/Button";
 import SectionTitle from "../components/common/SectionTitle";
 import Footer from "../components/layout/Footer";
-import { bannerImage, ispmLogo, midspLogo } from "../assets/images";
+import { ispmLogo } from "../assets/images.ts";
+import midspLogo from "../assets/midsp.jpeg";
 
 const principles = [
   {
@@ -179,7 +180,7 @@ function HeroBanner() {
   return (
     <div className="relative overflow-hidden rounded-3xl border border-line bg-white shadow-[0_22px_50px_-38px_rgba(15,23,42,0.35)]">
       <div className="relative aspect-[16/9] w-full overflow-hidden sm:aspect-[18/8] lg:aspect-[20/8]">
-          <img alt="Bannière institutionnelle" className="absolute inset-0 h-full w-full object-cover object-center" src={bannerImage} />
+          <img alt="Bannière institutionnelle" className="absolute inset-0 h-full w-full object-cover object-center" src="/banniere.jpeg" />
         <div className="absolute inset-0 bg-gradient-to-tr from-brand-950/55 via-brand-950/20 to-white/5" />
         <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 px-5 py-4 text-white sm:px-6">
           <div>
@@ -427,7 +428,7 @@ export default function Home() {
                   <img
                     alt="Ministère de l’Industrialisation et du Développement du Secteur Privé"
                     className="absolute inset-0 h-full w-full object-cover opacity-90"
-                    src={bannerImage}
+                    src="/banniere.jpeg"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-brand-950/35 to-transparent" />
                 </div>

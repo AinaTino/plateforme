@@ -1,6 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import { midspLogo } from "../../assets/images";
+import midspLogo from "../../assets/midsp.jpeg";
 
 const links = [
   ["Accueil", "/"],
