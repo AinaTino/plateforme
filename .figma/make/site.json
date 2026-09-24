@@ -1,0 +1,10 @@
+{
+  "description": "Create stunning web pages effortlessly with a user-friendly interface for designing and customizing layouts, perfect for businesses and creatives.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
