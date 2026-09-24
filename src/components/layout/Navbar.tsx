@@ -1,7 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import midspLogo from "../../imports/WhatsApp_Image_2026-09-24_at_12.58.41__1_.jpeg";
+import midspLogo from "../../imports/midsp.jpeg";
 
 const links = [
   { label: "Accueil", href: "/", end: true },

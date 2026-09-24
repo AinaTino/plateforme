@@ -15,8 +15,9 @@ import Button from "../components/common/Button";
 import SectionTitle from "../components/common/SectionTitle";
 import Footer from "../components/layout/Footer";
 import Navbar from "../components/layout/Navbar";
-import fpmLogo from "../imports/WhatsApp_Image_2026-09-24_at_12.58.41.jpeg";
-import midspBanner from "../imports/WhatsApp_Image_2026-09-24_at_12.58.41__2_.jpeg";
+import ispmLogo from "../imports/ispm.jpeg";
+import midspLogo from "../imports/midsp.jpeg";
+import midspBanner from "../imports/banniere.jpeg";
 
 const principles = [
   {
@@ -162,6 +163,47 @@ function HeroDashboard() {
   );
 }
 
+function HeroInstitutionStrip() {
+  return (
+    <div className="flex items-center justify-between gap-4 rounded-2xl border border-line bg-white px-5 py-4 shadow-[0_18px_40px_-34px_rgba(15,23,42,0.28)] sm:px-6">
+      <div className="flex min-w-0 items-center gap-3">
+        <img alt="MIDSP" className="h-14 w-auto shrink-0 object-contain sm:h-16" src={midspLogo} />
+      </div>
+      <div className="hidden h-px flex-1 bg-gradient-to-r from-transparent via-line to-transparent lg:block" />
+      <div className="flex min-w-0 items-center justify-end gap-3">
+        <img alt="ISPM" className="h-14 w-auto shrink-0 object-contain sm:h-16" src={ispmLogo} />
+      </div>
+
+    </div>
+  );
+}
+
+function HeroBanner() {
+  return (
+    <div className="relative overflow-hidden rounded-3xl border border-line bg-white shadow-[0_22px_50px_-38px_rgba(15,23,42,0.35)]">
+      <div className="relative aspect-[16/9] w-full overflow-hidden sm:aspect-[18/8] lg:aspect-[20/8]">
+        <img
+          alt="Bannière institutionnelle"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          src={midspBanner}
+        />
+        <div className="absolute inset-0 bg-gradient-to-tr from-brand-950/55 via-brand-950/20 to-white/5" />
+        <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 px-5 py-4 text-white sm:px-6">
+          <div>
+            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-blue-200">
+              Institution
+            </p>
+            <p className="mt-1 text-sm font-semibold sm:text-base">Service Financier et du Budget</p>
+          </div>
+          <p className="text-right text-[11px] font-medium text-slate-200 sm:text-xs">
+            Bannière de démonstration
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-canvas text-ink">
@@ -169,8 +211,9 @@ export default function Home() {
       <main>
         <section className="relative overflow-hidden border-b border-line bg-white">
           <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-300 to-transparent" />
-          <div className="mx-auto grid max-w-7xl gap-14 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:py-28">
+          <div className="mx-auto grid max-w-7xl gap-14 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.02fr_0.98fr] lg:items-start lg:py-28">
             <div>
+              <HeroInstitutionStrip />
               <div className="inline-flex items-center gap-2 rounded-md border border-brand-200 bg-brand-50 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-brand-800">
                 <span className="h-2 w-2 rounded-full bg-brand-600" />
                 Plateforme de suivi
@@ -200,7 +243,10 @@ export default function Home() {
                 ))}
               </div>
             </div>
-            <HeroDashboard />
+            <div className="space-y-5">
+              <HeroBanner />
+              <HeroDashboard />
+            </div>
           </div>
         </section>
 
@@ -402,10 +448,10 @@ export default function Home() {
                   Partenaire représenté
                 </p>
                 <p className="mt-1 text-sm font-semibold">
-                  FPM · Identité institutionnelle partenaire
+                  ISPM · Identité institutionnelle partenaire
                 </p>
               </div>
-              <img alt="Logo FPM" className="h-20 w-auto object-contain" src={fpmLogo} />
+              <img alt="Logo ISPM" className="h-20 w-auto object-contain" src={ispmLogo} />
             </div>
           </div>
         </section>
