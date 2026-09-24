@@ -2,6 +2,7 @@ import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { midspLogo } from "../../assets/images";
 
 const links = [
   { label: "Accueil", href: "/", end: true },
@@ -27,7 +28,7 @@ export default function Navbar() {
           <img
             alt=""
             className="h-12 w-12 rounded-lg object-contain"
-            src="/midsp.jpeg"
+            src={midspLogo}
           />
           <span className="hidden sm:block">
             <span className="block text-sm font-bold leading-tight text-ink">
