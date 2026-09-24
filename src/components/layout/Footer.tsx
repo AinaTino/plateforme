@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 import midspLogo from "../../imports/WhatsApp_Image_2026-09-24_at_12.58.41__1_.jpeg";
 
 const links = [
@@ -40,9 +41,9 @@ export default function Footer() {
             <ul className="mt-5 space-y-3">
               {links.map(([label, href]) => (
                 <li key={href}>
-                  <a className="text-sm text-slate-300 transition hover:text-white" href={href}>
+                  <Link className="text-sm text-slate-300 transition hover:text-white" to={href}>
                     {label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

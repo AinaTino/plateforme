@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import type { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 type ButtonProps = {
   children: ReactNode;
@@ -24,12 +25,12 @@ export default function Button({
   arrow = false,
 }: ButtonProps) {
   return (
-    <a
+    <Link
       className={`inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border px-5 py-2.5 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-600 focus-visible:ring-offset-2 ${styles[variant]}`}
-      href={href}
+      to={href}
     >
       {children}
       {arrow && <ArrowRight aria-hidden="true" size={17} />}
-    </a>
+    </Link>
   );
 }
