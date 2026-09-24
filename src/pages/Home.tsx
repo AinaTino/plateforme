@@ -14,9 +14,6 @@ import {
 import Button from "../components/common/Button";
 import SectionTitle from "../components/common/SectionTitle";
 import Footer from "../components/layout/Footer";
-import ispmLogo from "../imports/ispm.jpeg";
-import midspLogo from "../imports/midsp.jpeg";
-import midspBanner from "../imports/banniere.jpeg";
 
 const principles = [
   {
@@ -166,11 +163,11 @@ function HeroInstitutionStrip() {
   return (
     <div className="flex items-center justify-between gap-4 rounded-2xl border border-line bg-white px-5 py-4 shadow-[0_18px_40px_-34px_rgba(15,23,42,0.28)] sm:px-6">
       <div className="flex min-w-0 items-center gap-3">
-        <img alt="MIDSP" className="h-14 w-auto shrink-0 object-contain sm:h-16" src={midspLogo} />
+        <img alt="MIDSP" className="h-14 w-auto shrink-0 object-contain sm:h-16" src="/midsp.jpeg" />
       </div>
       <div className="hidden h-px flex-1 bg-gradient-to-r from-transparent via-line to-transparent lg:block" />
       <div className="flex min-w-0 items-center justify-end gap-3">
-        <img alt="ISPM" className="h-14 w-auto shrink-0 object-contain sm:h-16" src={ispmLogo} />
+        <img alt="ISPM" className="h-14 w-auto shrink-0 object-contain sm:h-16" src="/ispm.jpeg" />
       </div>
 
     </div>
@@ -181,11 +178,7 @@ function HeroBanner() {
   return (
     <div className="relative overflow-hidden rounded-3xl border border-line bg-white shadow-[0_22px_50px_-38px_rgba(15,23,42,0.35)]">
       <div className="relative aspect-[16/9] w-full overflow-hidden sm:aspect-[18/8] lg:aspect-[20/8]">
-        <img
-          alt="Bannière institutionnelle"
-          className="absolute inset-0 h-full w-full object-cover object-center"
-          src={midspBanner}
-        />
+          <img alt="Bannière institutionnelle" className="absolute inset-0 h-full w-full object-cover object-center" src="/banniere.jpeg" />
         <div className="absolute inset-0 bg-gradient-to-tr from-brand-950/55 via-brand-950/20 to-white/5" />
         <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 px-5 py-4 text-white sm:px-6">
           <div>
@@ -433,7 +426,7 @@ export default function Home() {
                   <img
                     alt="Ministère de l’Industrialisation et du Développement du Secteur Privé"
                     className="absolute inset-0 h-full w-full object-cover opacity-90"
-                    src={midspBanner}
+                    src="/banniere.jpeg"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-brand-950/35 to-transparent" />
                 </div>
@@ -449,7 +442,7 @@ export default function Home() {
                   ISPM · Identité institutionnelle partenaire
                 </p>
               </div>
-              <img alt="Logo ISPM" className="h-20 w-auto object-contain" src={ispmLogo} />
+              <img alt="Logo ISPM" className="h-20 w-auto object-contain" src="/ispm.jpeg" />
             </div>
           </div>
         </section>

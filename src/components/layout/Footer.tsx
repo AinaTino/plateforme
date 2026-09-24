@@ -1,6 +1,5 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
-import midspLogo from "../../imports/midsp.jpeg";
 
 const links = [
   ["Accueil", "/"],
@@ -20,7 +19,7 @@ export default function Footer() {
               <img
                 alt=""
                 className="h-12 w-12 rounded-lg bg-white object-contain"
-                src={midspLogo}
+                src="/midsp.jpeg"
               />
               <p className="text-sm font-bold leading-5">
                 Suivi des dépenses
