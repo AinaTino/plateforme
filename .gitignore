@@ -19,3 +19,7 @@ logs/
 # beside it.
 /.plugins/
 /.opencode-skills/
+AGENTS.md 
+cahier_de_charge.md
+CLAUDE.md
+./src/imports/pasted_text/cahier-des-charges.md
